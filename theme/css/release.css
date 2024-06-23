@@ -1,0 +1,114 @@
+/*--------------------------------------------------------------
+# Release page CSS
+--------------------------------------------------------------*/
+.release-block {
+  padding: 12px;
+  position: relative;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  margin-bottom: 24px;
+  background-color: #fff;
+}
+.release-block h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.release-block h1:after {
+  display: block;
+  content: '';
+  background-color: #000;
+  height: 4px;
+  width: 74px;
+  margin-top: 0.5rem;
+  margin-bottom: 1.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.release-block h2 {
+  margin: 0;
+  padding: 0;
+  color: #abb4b9;
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 1.5rem;
+}
+.release-block h3 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+.release-block p:last-child {
+  margin: 0;
+}
+.release-list {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  row-gap: 2rem;
+}
+.release-list i {
+  font-size: 36px;
+}
+.release-list a {
+  position: relative;
+  color: #000;
+  flex-basis: 22%;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 24px;
+}
+.release-list a:hover {
+  text-decoration: none;
+  background-color: #f0f5f9;
+}
+.release-name {
+  line-height: 1;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.release-share {
+  margin: -12px;
+  margin-top: 1.5rem;
+  background-color: #f0f5f9;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 12px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+.release-share h3 {
+  padding: 6px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.release-share a {
+  flex-basis: 20%;
+  /* padding: 12px 0; */
+}
+.release-share a:hover {
+  background-color: #dee3e7;
+}
+.release-share i {
+  font-size: 25px;
+}
+
+.release-buy {
+  justify-content: flex-start;
+}
+
+.release-about {
+  padding: 24px;
+  font-size: 1.125rem;
+}

@@ -1,0 +1,228 @@
+/*--------------------------------------------------------------
+# Category page CSS
+--------------------------------------------------------------*/
+.entry,
+.entry-music {
+  padding: 48px 0;
+  max-width: 100%;
+}
+.entry:first-of-type,
+.entry-music:first-of-type {
+  padding-top: 0;
+}
+@media (min-width: 768px) {
+  .entry,
+  .entry-music {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    column-gap: 20px;
+  }
+  article.entry:nth-of-type(odd),
+  article.entry-music {
+    grid-template-columns: 200px 1fr;
+  }
+  article.entry:nth-of-type(even) {
+    grid-template-columns: 1fr 200px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+## Thumbnail
+--------------------------------------------------------------*/
+.entry-thumbnail {
+  width: 200px;
+  margin-bottom: 2rem;
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.entry-thumbnail img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  article.entry:nth-of-type(odd) .entry-thumbnail,
+  article.entry-music .entry-thumbnail {
+    grid-column:1;
+    grid-row:1;
+  }
+  article.entry:nth-of-type(even) .entry-thumbnail {
+    grid-column:2;
+    grid-row:1;
+  }
+  .entry-thumbnail {
+    margin: 0;
+  }
+  .entry-music .entry-thumbnail {
+    width: 100%;
+  }
+}
+
+/*--------------------------------------------------------------
+### Thumbnail player
+--------------------------------------------------------------*/
+.entry-music .media-player {
+  position: unset;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.entry-music .media-player button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.entry-music .media-player i {
+  font-size: 60px;
+  color: #ffffffc4;
+}
+
+.entry-music .progress-bar-wrapper,
+.entry-music .progress-bar {
+  height: 7px;
+  cursor: pointer;
+}
+.entry-music .progress-bar-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+}
+.entry-music .progress-bar {
+  background: #ffffffc4;
+  width: 44%;
+}
+
+
+/*--------------------------------------------------------------
+## Content
+--------------------------------------------------------------*/
+.entry-content {
+  grid-column: 1;
+  grid-row: 2;
+  position: relative;
+}
+.entry-more a {
+  color: #39739d;
+  float: right;
+}
+.entry-more {
+  margin: 0;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  article.entry:nth-of-type(odd) .entry-content,
+  article.entry-music .entry-content {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  article.entry:nth-of-type(even) .entry-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+.entry-header {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+@media (max-width: 767px) {
+  .entry-header {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.entry-header a {
+  color: #000;
+  text-decoration: none;
+}
+.entry-header a:hover {
+  color: #396eb0;
+  text-decoration: none;
+}
+
+.entry-meta {
+  padding-bottom: 0.5em;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #abb4b9;
+  font-size: 1rem;
+  line-height: 1;
+}
+.entry-summary {
+  margin: 0;
+  padding-top: 0.5em;
+  color: #6f738f;
+  margin-bottom: 1em;
+}
+@media (max-width: 767px) {
+  .entry-music .entry-summary {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+.entry-summary p {
+  line-height: 1.5;
+  margin: 0;
+}
+
+.entry-hr {
+  margin-bottom: 2em;
+  display: normal;
+}
+.entry-hr:last-of-type {
+  display: none;
+}
+@media (min-width: 768px) {
+  .entry-hr {
+    display: none;
+  }
+}
+
+
+/*--------------------------------------------------------------
+## Pagination
+--------------------------------------------------------------*/
+.pagination {
+  display: block;
+}
+.pagination-item {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #eee;
+  text-align: center;
+  color: #9a9a9a;
+}
+.pagination-item:first-child {
+  margin-bottom: -1px;
+}
+@media (min-width: 468px) {
+  .pagination {
+    display: flex;
+  }
+  .pagination-item {
+    float: left;
+    width: 50%;
+  }
+  .pagination-item:first-child {
+    margin-bottom: 0;
+    border-top-left-radius:    7px;
+    border-bottom-left-radius: 7px;
+  }
+  .pagination-item:last-child {
+    margin-left: -1px;
+    border-top-right-radius:    7px;
+    border-bottom-right-radius: 7px;
+  }
+}
